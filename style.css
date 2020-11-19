@@ -1,0 +1,482 @@
+@import url(fonts.css);
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--poppines);
+}
+
+body{
+    width: 414px;
+    background: white;
+    position: relative;
+    padding: 0 20px;
+}
+
+:root{
+    --hoverColor: #FFBA00;
+    --poppines: 'poppines', cursive;
+}
+
+/* ----- global style ----- */
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+/* ----- global style ----x */
+
+/* ----- navbar ----- */
+.nav{
+   position: fixed;
+   bottom: 0;
+   left: 0;
+   width: 100%;
+   height: 50px;
+   z-index: 112;
+   box-shadow: 0 0px 5px gray;
+   border-radius: 8px 8px 0 0;
+   display: flex;
+   background: white;
+}
+
+.nav-icon{
+    width: 25%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-icon>i{
+    color: gray;
+    font-size: 20px;
+}
+
+.nav-icon>i:hover{
+    color: var(--hoverColor);
+    font-size: 25px;
+}
+
+.nav-items{
+    position: fixed;
+    width: 80%;
+    height: 100%;
+    background: white;
+    top: 0;
+    left: 0;
+    padding: 70px 20px;
+    background: #f5f5f5;
+    box-shadow: 1px 0 5px grey;
+    z-index: 111;
+    transform: translateX(-110%);
+    transition: all .5s;
+}
+
+.nav-link{
+    width: 100%;
+    height: 50px;
+    display: flex;
+}
+
+.nav-link>a{
+    width: 100%;
+    font-size: 18px;
+    font-family: var(--poppines);
+    text-transform: capitalize;
+    color: black;
+    display: flex;
+    align-items: center;
+}
+
+.toggle-times{
+    position: absolute;
+    top: 35px;
+    left: 50px;
+    transition: all .5s;
+    transition-delay: .2s;
+}
+
+.toggle-times>i, .toggle-bars>i{
+    color: black;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.menu{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    background: white;
+    z-index: 110;
+    justify-content: space-between;
+}
+
+.user{
+    position: absolute;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #FFBA00;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.user>i{
+    color: white;
+    font-size: 25px;
+}
+
+.user>img{
+    width: 100%;
+    height: 100%;
+}
+/* ----- navbar ----x */
+
+/* ----- section ----- */
+section{
+    width: 100%;
+    height: 100%;
+    padding: 120px 0;
+}
+
+section>p{
+    color: black;
+    font-size: 18px;
+    font-family: var(--poppines);
+    margin: 0 0 10px 0;
+}
+
+section>h1{
+    color: black;
+    font-size: 24px;
+    font-family: var(--poppines);
+    text-transform: capitalize;
+}
+
+.search-box{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 28px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.search-box>input{
+    width: 286px;
+    height: 100%;
+    border: solid 2px #FFBA00;
+    border-radius: 8px;
+    color: black;
+    font-size: 18px;
+    font-family: var(--poppines);
+    outline: none;
+    text-align: center;
+}
+
+.search-box::before{
+    position: absolute;
+    content: 'search food';
+    top: 0;
+    left: 0;
+    width: 150px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    color: gray;
+    font-family: var(--poppines);
+    font-size: 15px;
+    transition: all .5s;
+}
+
+.search-box:hover::before,
+.search-box:focus::before{
+    top: -40px;
+}
+
+.search-icon{
+    height: 100%;
+    width: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #FFBA00;
+    border-radius: 8px;
+    color: white;
+    font-size: 18px;
+}
+
+.dpf{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.donut{
+    position: relative;
+    border: solid 2px #FFBA00;
+    width: 100px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+}
+
+.donut>a{
+    width: 100%;
+    height: 100%;
+    color: gray;
+    font-size: 15px;
+    font-family: var(--poppines);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+    transition: all .5s;
+}
+
+.donut:hover a{
+    background: #FFBA00;
+    color: white;
+}
+
+.tpf{
+    width: 100%;
+    height: 100%;
+}
+
+.tasty{
+    position: relative;
+    width: 100%;
+    height: 150px;
+    border: solid 2px #FFBA00;
+    border-radius: 8px;
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.pecheniye{
+    width: 128px;
+    height: 128px;
+    background: #FFEFDF;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.text{
+    margin-left: 20px;
+}
+
+.text>h1{
+    color: black;
+    font-family: var(--poppines);
+    font-size: 18px;
+}
+
+.text>p{
+    margin: 10px 0;
+    color: gray;
+    font-size: 15px;
+    font-family: var(--poppines);
+}
+
+.tasty:nth-child(2) .pecheniye{
+    background: #FFE8F5;
+}
+.tasty:nth-child(2) .pecheniye>img{
+    width: 100%;
+    height: 100%;
+}
+
+.tasty:nth-child(3) .pecheniye{
+    background: #FFC3D4;
+}
+
+.tasty>a{
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+    padding: 5px 10px 0px 30px;
+    color: white;
+    background: #FFBA00;
+    border-radius: 100% 5px 5px 5px;
+    font-size: 25px;
+    font-weight: bold;
+
+}
+/* ----- section ----x */
+
+
+
+/* ----- section 2 ----- */
+.menu-2{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+.menu-2>i, .menu-2>a>i{
+    font-size: 25px;
+    color: black;
+    
+}
+
+.for-img{
+    position: absolute;
+    top: 0px;
+    left: 0;
+    width: 100%;
+    height: 418px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url(Rectangle\ 20.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+}
+
+.text-2{
+    position: relative;
+    margin-top: 365px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.text-2 h1{
+    color: black;
+    font-size: 22px;
+    font-family: var(--poppines);
+}
+
+.text-2 p{
+    color: black;
+    font-family: var(--poppines);
+    font-size: 15px;
+}
+
+.text-in{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.flex{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.flex>h2{
+    font-family: var(--poppines);
+    color: gray;
+    font-size: 18px;
+    margin: 0px 30px;
+}
+
+.flex>h2:nth-child(3){
+    color: black;
+}
+
+.flex>i{
+    position: absolute;
+    color: #FFBA00;
+    font-size: 18px;
+    left: 0;
+    top: 5px;
+}
+
+.flex-2{
+    display: flex;
+}
+
+.flex-2>button{
+    width: 24px;
+    height: 24px;
+    background: #FFBA00;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    outline: none;
+    cursor: pointer;
+    border: none;
+}
+
+.flex-2> .number{
+    width: 40px;
+    height: 24px;
+    margin: 0 5px;
+    text-align: center;
+    font-family: var(--poppines);
+    color: black;
+    border: solid 2px #FFBA00;
+    border-radius: 5px;
+    font-size: 14px;
+    outline: none;
+}
+
+input[type = number]::-webkit-inner-spin-button,
+input[type = number]::-webkit-outer-spin-button{
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.r-info{
+    width: 100%;
+}
+
+.r-info>p{
+    color: gray;
+}
+
+.add{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+#add{
+    display: flex;
+    width: 321px;
+    height: 61px;
+    background: #FFBA00;
+    border-radius: 8px;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 18px;
+    font-family: var(--poppines);
+    outline: none;
+}
+/* ----- section 2 ----x */
